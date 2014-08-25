@@ -1,5 +1,3 @@
-Practicum-Meals
-===============
 Requirements:
 -------------
 Build a consol application that accepts time of day and meal id as inputs and outputs meal.  The output is governed by various
@@ -58,13 +56,13 @@ the 'Meal' implementation.
 Project Implementation Details:
 -------------------------------
 ----------------------------------
-Serivce			| Project Name
+Serivce				| Project Name
 ----------------------------------
-UI			| Practicum.Console
-Input Rules		| Practicum.Rules
+UI					| Practicum.Console
+Input Rules			| Practicum.Rules
 Business Rules		| Practicum.Meal.Rules
 Business Process	| Practicum.Meal
-Contracts		| Practicum.Contracts
+Contracts			| Practicum.Contracts
 
 
 The UI project is the startup project and is responsible to install and prepare DI.  The MealBuilder composes the 
