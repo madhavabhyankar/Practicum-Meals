@@ -16,11 +16,9 @@ Infrastructure required:
 
 1. Windows OS
 2. Dot Net 4.5 Installed.
-Build System:
-3. Powershell verion 4. (Although >3 should work, but I have only tested on 4.)
-4. MSTest Framework
-Debug and Solution:
-5. Visual Studio 2013
+3. Powershell verion 4. For Building and testing (Although >3 should work, but I have only tested on 4.)
+4. MSTest Framework. For unit testing
+5. Visual Studio 2013. Debuggin
 
 
 Thrid Party Components:
