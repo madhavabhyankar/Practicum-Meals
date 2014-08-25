@@ -2,8 +2,7 @@ Practicum-Meals
 ===============
 Requirements:
 -------------
-Build a consol application that accepts time of day and meal id as inputs and outputs meal.  The output is governed by various
-rules. 
+Build a console application that accepts time of day and meal ids as inputs and outputs meal.  The output is governed by various rules. 
 Other Related Requirements:
 
 1. Object Oriented
