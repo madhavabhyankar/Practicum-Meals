@@ -5,26 +5,28 @@ Requirements:
 Build a consol application that accepts time of day and meal id as inputs and outputs meal.  The output is governed by various
 rules. 
 Other Related Requirements:
-1) Object Oriented
-2) Readable
-3) Maintainable
-4) Testable
+
+1. Object Oriented
+2. Readable
+3. Maintainable
+4. Testable
 
 Project Infrastructure:
 -----------------------
-1) Windows OS
-2) Dot Net 4.5 Installed.
-	Build System:
-	3) Powershell verion 4. (Although >3 should work, but I have only tested on 4.)
-	4) MSTest Framework
+Infrastructure required:
 
-	Debug and Solution:
-	5) Visual Studio 2013
+1. Windows OS
+2. Dot Net 4.5 Installed.
+Build System:
+3. Powershell verion 4. (Although >3 should work, but I have only tested on 4.)
+4. MSTest Framework
+Debug and Solution:
+5. Visual Studio 2013
 
 
 Thrid Party Components:
 -----------------------
-1) Castle Windsor for IOC and DI
+1. Castle Windsor for IOC and DI
 
 Project Architectural Overview:
 --------------------------------
@@ -44,10 +46,10 @@ to compose all the services and display output.  From the definition of the proj
 To address c) Reduce regression burden and d) Simplified Deployment, its necessary that these components evolve indepedently of each 
 other.  Secondly by definition of SOA, each component must have a well defined boundry and must share only contracts. The 
 contract identified are 
-1) Dishes that can be served,
-2) Meal - to represent Morning Or Night
-3) Input Rules
-4) Business Rule
+1. Dishes that can be served,
+2. Meal - to represent Morning Or Night
+3. Input Rules
+4. Business Rule
 
 Assuming that this Business process is going to evolve beyond night and morning meals, the implementation of the 'Meal' contract 
 must be generated dynamically and more importantly built from the users input.  Also, as the process grows, changes and upgrades 
@@ -57,14 +59,13 @@ the 'Meal' implementation.
 
 Project Implementation Details:
 -------------------------------
-----------------------------------
-Serivce			| Project Name
-----------------------------------
-UI			| Practicum.Console
-Input Rules		| Practicum.Rules
-Business Rules		| Practicum.Meal.Rules
-Business Process	| Practicum.Meal
-Contracts		| Practicum.Contracts
+|Serivce | Project Name|
+|--------|-------------|
+|UI| Practicum.Console|
+|Input Rules| Practicum.Rules|
+|Business Rules| Practicum.Meal.Rules|
+|Business Process| Practicum.Meal|
+|Contracts| Practicum.Contracts|
 
 
 The UI project is the startup project and is responsible to install and prepare DI.  The MealBuilder composes the 
@@ -85,9 +86,15 @@ Please run Practicum.Console to see everything in action.
 The powershell script also executes unit tests for each of the component.
 
 from Powershell use the command 
-'.\Deploy.ps1'
+
+```powershell
+.\Deploy.ps1
+```
 
 from Command Prompt
-'powershell.exe -noexit -file Deploy.ps1'
+
+```
+powershell.exe -noexit -file Deploy.ps1
+```
 
 
