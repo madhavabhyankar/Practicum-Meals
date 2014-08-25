@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Castle.Core.Internal;
 using Castle.MicroKernel;
+using Castle.MicroKernel.Resolvers;
 using Practicum.Console.Builder;
 using Practicum.Console.IOC;
 
@@ -29,7 +30,7 @@ namespace Practicum.Console
             {
                 //Mealbuilder wires business logic and rules.
                 var mealBuiler = installer.Container.Resolve<IMealBuilder>();
-                
+
                 //Initialize input
                 var input = string.Empty;
                 do
@@ -65,6 +66,16 @@ namespace Practicum.Console
                 System.Console.WriteLine(
                     "Cannot resolve component necessary for the application to run.  Please ensure that the Business Rules and Business Process libraries exist in {0}",
                     System.Environment.CurrentDirectory);
+                System.Console.WriteLine("Exising, hit 'return' to quit");
+                System.Console.Read();
+            }
+            catch (DependencyResolverException)
+            {
+                System.Console.WriteLine(
+                    "Cannot resolve component necessary for the application to run.  Please ensure that the Business Rules and Business Process libraries exist in {0}",
+                    System.Environment.CurrentDirectory);
+                System.Console.WriteLine("Exising, hit 'return' to quit");
+                System.Console.Read();
             }
             finally
             {
